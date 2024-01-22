@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/txt_gone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_textview"
+            android:text="Hello"
+            android:visibility="gone"
+            android:gravity="center"
+            />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_dtor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/layout_doctor_item"
+                />
+        </androidx.core.widget.NestedScrollView>
+        <Button
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_back_dt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_image_oval"
+            android:layout_gravity="center_horizontal"
+            android:drawableBottom="@drawable/baseline_keyboard_arrow_down_24"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

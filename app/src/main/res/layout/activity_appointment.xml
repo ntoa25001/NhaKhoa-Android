@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AppointmentActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleMarginStart="80dp" >
+        <ImageView
+            android:id="@+id/icon_close_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back_real"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Đặt lịch theo ngày"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Tên bệnh nhân"
+            android:background="@drawable/button_selector"
+            android:textColorHint="#176BBD"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="#0288D1"
+            app:boxStrokeErrorColor="@color/purple_200"
+            app:endIconMode="clear_text"
+            app:hintTextColor="#1976D2"
+            app:startIconDrawable="@drawable/baseline_person_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtInName"
+                style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_transparent_input"
+                android:layout_height="wrap_content"
+                android:textColorHint="#3F51B5"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Ngày khám"
+            android:textColorHint="#0288D1"
+            android:background="@drawable/button_selector"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/purple_700"
+            app:boxStrokeErrorColor="@color/purple_200"
+            app:hintTextColor="#1976D2"
+            app:startIconDrawable="@drawable/baseline_calendar_month_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_ngaykham"
+                style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_transparent_input"
+                android:focusable="false"
+                android:inputType="none"
+                android:textColorHint="#3F51B5"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Chuyên khoa"
+            android:textColorHint="#0288D1"
+            app:errorEnabled="true"
+            android:background="@drawable/button_selector"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/purple_700"
+            app:boxStrokeErrorColor="@color/purple_200">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_chuyenkhoa"
+                style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_transparent_input"
+                android:drawableRight="@drawable/baseline_keyboard_arrow_down_24"
+                android:focusable="false"
+                android:inputType="none"
+                android:textColorHint="#3F51B5"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Giờ khám"
+            android:textColorHint="#0288D1"
+            android:background="@drawable/button_selector"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/purple_700"
+            app:boxStrokeErrorColor="@color/purple_200">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_giokham"
+                style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                android:background="@drawable/bg_transparent_input"
+                android:drawableRight="@drawable/baseline_keyboard_arrow_down_24"
+                android:focusable="false"
+                android:inputType="none"
+                android:textColorHint="#3F51B5"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/purple_700"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_selector"
+            app:boxStrokeErrorColor="@color/purple_200"
+            app:boxBackgroundMode="outline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bác sĩ">
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                android:id="@+id/edt_bacsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#3F51B5"
+                android:focusable="false"
+                android:inputType="none"
+                android:visibility="gone"
+                android:textSize="20sp"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Dich vu"
+            android:background="@drawable/button_selector"
+            android:textColorHint="#0288D1"
+            app:errorEnabled="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/purple_700"
+            app:boxStrokeErrorColor="@color/purple_200">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_dichvu"
+                style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_transparent_input"
+                android:drawableRight="@drawable/baseline_keyboard_arrow_down_24"
+                android:focusable="false"
+                android:inputType="none"
+                android:textColorHint="#3F51B5"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Ghi chú"
+            android:textColorHint="#0288D1"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/purple_700"
+            app:boxStrokeErrorColor="@color/purple_200"
+            app:counterEnabled="true"
+            app:errorEnabled="true"
+            app:counterMaxLength="200">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_note"
+                style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="top"
+                android:background="@drawable/bg_transparent_input"
+                android:textColorHint="#3F51B5"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnDatlich"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="31dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:enabled="true"
+            android:text="Đặt lịch"
+            android:textColorHint="#0288D1"
+            android:textColorLink="#0288D1"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Lưu ý :"
+            android:textColor="#DF0D0D"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="1. Đặt lịch trước 1 ngày"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="2. Sau khi đặt lịch thành công, bạn sẽ nhận được thông báo qua email và điện thoại của nhân viên"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="3. Nếu bạn không đến khám bệnh, chúng tôi chỉ hoàn tiền 50% số tiền đặt cọc"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="4. Hãy đến phòng khám trước 15 phút để làm thủ tục"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="5. Mọi thắc mắc xin liên hệ hotline : 1900 1000"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tl_bar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#E43621F3"
+           >
+            <ImageView
+                android:id="@+id/action_view_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_menu_24"
+                />
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="?actionBarSize"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shape_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_logo"
+                    app:shapeAppearance="@style/circular"
+                    app:strokeWidth="5dp" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:text="VINA"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_phone"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_local_phone_24" />
+
+                <TextView
+                    android:id="@+id/txt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/img_phone"
+                    android:text="Tư vấn chuyên khoa"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_tv"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/img_phone"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="190984391"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_phoneht"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/baseline_phonelink_24" />
+
+                <TextView
+                    android:id="@+id/txt_tvht"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/img_phoneht"
+                    android:text="Tư vấn chuyên khoa"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_tvht"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/img_phoneht"
+                    android:layout_marginTop="5dp"
+                    android:text="190984392"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_photo"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+
+            />
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/circle_photo"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="TÌM HIỂU THÊM"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_hs"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/custom_button_main"
+                        android:drawableTop="@drawable/baseline_insert_drive_file_24"
+                        android:fontFamily="sans-serif"
+                        android:text="Thông tin
+                        cá nhân"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <Button
+                        android:id="@+id/btn_phieu"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/custom_button_main"
+                        android:drawableTop="@drawable/baseline_card_travel_24"
+                        android:fontFamily="sans-serif"
+                        android:text="Quản lý phiếu
+                        khám bệnh"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <Button
+                        android:id="@+id/btn_huongdan"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:background="@drawable/custom_button_main"
+                        android:drawableTop="@drawable/baseline_speaker_notes_24"
+                        android:fontFamily="sans-serif"
+                        android:text="Hướng dẫn
+                         đặt lịch "
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_service_detail"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="60dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/custom_button_main"
+                        android:drawableTop="@drawable/baseline_card_travel_24"
+                        android:fontFamily="sans-serif"
+                        android:text="Dịch vụ"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+                    <Button
+                        android:id="@+id/btn_prescription"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/custom_button_main"
+                        android:drawableTop="@drawable/baseline_insert_drive_file_24"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/white"
+                        android:text="Đơn thuốc
+                         của bạn"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_datlich"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/abeezee_regular"
+                android:background="@drawable/custom_button_lk"
+                android:text="Đặt lịch khám" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navi_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/layout_navigation_view"
+        app:menu="@menu/custom_menu"
+         />
+</androidx.drawerlayout.widget.DrawerLayout>
